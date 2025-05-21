@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lab name="REDE EMPRESARIAL" version="1" scripttimeout="300" lock="0">
+  <topology>
+    <nodes>
+      <node id="1" name="SW" type="iol" template="iol" image="L2-ADVENTERPRISEK9-M-15.2-IRON-20151103.bin" ethernet="10" nvram="1024" ram="1024" serial="4" console="" delay="0" icon="Switch.png" config="0" left="312" top="258">
+        <interface id="0" name="e0/0" type="ethernet" network_id="1"/>
+        <interface id="16" name="e0/1" type="ethernet" network_id="4"/>
+        <interface id="32" name="e0/2" type="ethernet" network_id="5"/>
+        <interface id="48" name="e0/3" type="ethernet" network_id="6"/>
+        <interface id="1" name="e1/0" type="ethernet" network_id="7"/>
+        <interface id="17" name="e1/1" type="ethernet" network_id="17"/>
+        <interface id="33" name="e1/2" type="ethernet" network_id="18"/>
+        <interface id="49" name="e1/3" type="ethernet" network_id="19"/>
+      </node>
+      <node id="2" name="SW" type="iol" template="iol" image="L2-ADVENTERPRISEK9-M-15.2-IRON-20151103.bin" ethernet="10" nvram="1024" ram="1024" serial="6" console="" delay="0" icon="Switch.png" config="0" left="936" top="222">
+        <interface id="0" name="e0/0" type="ethernet" network_id="2"/>
+        <interface id="16" name="e0/1" type="ethernet" network_id="8"/>
+        <interface id="32" name="e0/2" type="ethernet" network_id="9"/>
+        <interface id="48" name="e0/3" type="ethernet" network_id="10"/>
+        <interface id="1" name="e1/0" type="ethernet" network_id="11"/>
+      </node>
+      <node id="3" name="R3" type="iol" template="iol" image="L3-ADVENTERPRISEK9-M-15.4-2T.bin" ethernet="6" nvram="1024" ram="1024" serial="6" console="" delay="0" icon="Router.png" config="0" left="321" top="84">
+        <interface id="0" name="e0/0" type="ethernet" network_id="1"/>
+        <interface id="2" name="e2/0" type="ethernet" network_id="16"/>
+        <interface id="6" type="serial" name="s6/0" remote_id="4" remote_if="6"/>
+        <interface id="10" type="serial" name="s10/0" remote_id="16" remote_if="10"/>
+      </node>
+      <node id="4" name="R4" type="iol" template="iol" image="L3-ADVENTERPRISEK9-M-15.4-2T.bin" ethernet="6" nvram="1024" ram="1024" serial="6" console="" delay="0" icon="Router.png" config="0" left="705" top="81">
+        <interface id="0" name="e0/0" type="ethernet" network_id="2"/>
+        <interface id="6" type="serial" name="s6/0" remote_id="3" remote_if="6"/>
+        <interface id="26" type="serial" name="s10/1" remote_id="16" remote_if="26"/>
+      </node>
+      <node id="5" name="VPC5" type="vpcs" template="vpcs" image="" ethernet="1" delay="0" icon="Desktop2.png" config="0" left="348" top="420">
+        <interface id="0" name="eth0" type="ethernet" network_id="7"/>
+      </node>
+      <node id="6" name="VPC6" type="vpcs" template="vpcs" image="" ethernet="1" delay="0" icon="Desktop2.png" config="0" left="192" top="420">
+        <interface id="0" name="eth0" type="ethernet" network_id="4"/>
+      </node>
+      <node id="7" name="VPC7" type="vpcs" template="vpcs" image="" ethernet="1" delay="0" icon="Desktop2.png" config="0" left="267" top="417">
+        <interface id="0" name="eth0" type="ethernet" network_id="5"/>
+      </node>
+      <node id="8" name="VPC8" type="vpcs" template="vpcs" image="" ethernet="1" delay="0" icon="Desktop2.png" config="0" left="1071" top="84">
+        <interface id="0" name="eth0" type="ethernet" network_id="8"/>
+      </node>
+      <node id="9" name="VPC9" type="vpcs" template="vpcs" image="" ethernet="1" delay="0" icon="Desktop2.png" config="0" left="846" top="57">
+        <interface id="0" name="eth0" type="ethernet" network_id="9"/>
+      </node>
+      <node id="10" name="VPC10" type="vpcs" template="vpcs" image="" ethernet="1" delay="0" icon="Desktop2.png" config="0" left="423" top="411">
+        <interface id="0" name="eth0" type="ethernet" network_id="6"/>
+      </node>
+      <node id="11" name="VPC11" type="vpcs" template="vpcs" image="" ethernet="1" delay="0" icon="Desktop2.png" config="0" left="921" top="63">
+        <interface id="0" name="eth0" type="ethernet" network_id="11"/>
+      </node>
+      <node id="12" name="VPC12" type="vpcs" template="vpcs" image="" ethernet="1" delay="0" icon="Desktop2.png" config="0" left="993" top="69">
+        <interface id="0" name="eth0" type="ethernet" network_id="10"/>
+      </node>
+      <node id="13" name="Node13" type="iol" template="iol" image="L2-ADVENTERPRISEK9-M-15.2-IRON-20151103.bin" ethernet="10" nvram="1024" ram="1024" serial="6" console="" delay="0" icon="Switch.png" config="0" left="753" top="474">
+        <interface id="0" name="e0/0" type="ethernet" network_id="3"/>
+        <interface id="16" name="e0/1" type="ethernet" network_id="12"/>
+        <interface id="32" name="e0/2" type="ethernet" network_id="13"/>
+        <interface id="48" name="e0/3" type="ethernet" network_id="14"/>
+        <interface id="1" name="e1/0" type="ethernet" network_id="15"/>
+      </node>
+      <node id="14" name="VPC14" type="vpcs" template="vpcs" image="" ethernet="1" delay="0" icon="Desktop2.png" config="0" left="987" top="351">
+        <interface id="0" name="eth0" type="ethernet" network_id="12"/>
+      </node>
+      <node id="15" name="VPC15" type="vpcs" template="vpcs" image="" ethernet="1" delay="0" icon="Desktop2.png" config="0" left="999" top="558">
+        <interface id="0" name="eth0" type="ethernet" network_id="14"/>
+      </node>
+      <node id="19" name="VPC19" type="vpcs" template="vpcs" image="" ethernet="1" delay="0" icon="Desktop2.png" config="0" left="981" top="420">
+        <interface id="0" name="eth0" type="ethernet" network_id="13"/>
+      </node>
+      <node id="20" name="VPC20" type="vpcs" template="vpcs" image="" ethernet="1" delay="0" icon="Desktop2.png" config="0" left="996" top="486">
+        <interface id="0" name="eth0" type="ethernet" network_id="15"/>
+      </node>
+      <node id="16" name="R16" type="iol" template="iol" image="L3-ADVENTERPRISEK9-M-15.4-2T.bin" ethernet="10" nvram="1024" ram="1024" serial="6" console="" delay="0" icon="Router.png" config="0" left="759" top="351">
+        <interface id="0" name="e0/0" type="ethernet" network_id="3"/>
+        <interface id="10" type="serial" name="s10/0" remote_id="3" remote_if="10"/>
+        <interface id="26" type="serial" name="s10/1" remote_id="4" remote_if="26"/>
+      </node>
+      <node id="17" name="Linux17" type="qemu" template="linux" image="linux-ubuntu-srv-16.04.4-webmin" console="vnc" cpu="1" cpulimit="0" ram="2048" ethernet="6" uuid="faedc787-f481-40ce-a9e9-bfe69e634934" firstmac="00:50:00:00:11:00" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=dc" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="Server.png" config="0" left="144" top="333">
+        <interface id="0" name="e0" type="ethernet" network_id="19"/>
+      </node>
+      <node id="18" name="Linux18" type="qemu" template="linux" image="linux-ubuntu-srv-16.04.4-webmin" console="vnc" cpu="1" cpulimit="0" ram="2048" ethernet="6" uuid="832f6e5b-bb83-46e8-98d0-c14c7b14ccae" firstmac="00:50:00:00:12:00" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=dc" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="Server.png" config="0" left="156" top="231">
+        <interface id="0" name="e0" type="ethernet" network_id="18"/>
+      </node>
+      <node id="21" name="Linux21" type="qemu" template="linux" image="linux-ubuntu-srv-16.04.4-webmin" console="vnc" cpu="1" cpulimit="0" ram="2048" ethernet="6" uuid="cb14dfe3-5a04-4a23-ab20-54b12ffa8588" firstmac="00:50:00:00:15:00" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=dc" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="Server.png" config="0" left="180" top="132">
+        <interface id="0" name="e0" type="ethernet" network_id="17"/>
+      </node>
+    </nodes>
+    <networks>
+      <network id="1" type="bridge" name="Net-SWiface_0" left="312" top="274" visibility="0"/>
+      <network id="2" type="bridge" name="Net-SWiface_0" left="597" top="277" visibility="0"/>
+      <network id="4" type="bridge" name="Net-SWiface_16" left="312" top="274" visibility="0"/>
+      <network id="5" type="bridge" name="Net-SWiface_32" left="312" top="274" visibility="0"/>
+      <network id="6" type="bridge" name="Net-SWiface_48" left="312" top="274" visibility="0"/>
+      <network id="7" type="bridge" name="Net-SWiface_1" left="312" top="274" visibility="0"/>
+      <network id="8" type="bridge" name="Net-VPC8iface_0" left="552" top="376" visibility="0"/>
+      <network id="9" type="bridge" name="Net-VPC9iface_0" left="702" top="376" visibility="0"/>
+      <network id="10" type="bridge" name="Net-VPC12iface_0" left="561" top="463" visibility="0"/>
+      <network id="11" type="bridge" name="Net-VPC11iface_0" left="696" top="463" visibility="0"/>
+      <network id="3" type="bridge" name="Net-Node13iface_0" left="579" top="499" visibility="0"/>
+      <network id="12" type="bridge" name="Net-VPC14iface_0" left="699" top="493" visibility="0"/>
+      <network id="13" type="bridge" name="Net-VPC19iface_0" left="795" top="493" visibility="0"/>
+      <network id="14" type="bridge" name="Net-VPC15iface_0" left="885" top="496" visibility="0"/>
+      <network id="15" type="bridge" name="Net-VPC20iface_0" left="897" top="490" visibility="0"/>
+      <network id="16" type="pnet0" name="INTERNET " left="132" top="30" visibility="1"/>
+      <network id="17" type="bridge" name="Net-Linux21iface_0" left="273" top="184" visibility="0"/>
+      <network id="18" type="bridge" name="Net-Linux18iface_0" left="261" top="274" visibility="0"/>
+      <network id="19" type="bridge" name="Net-Linux17iface_0" left="204" top="373" visibility="0"/>
+    </networks>
+  </topology>
+  <objects>
+    <textobjects>
+      <textobject id="1" name="txt 1" type="text">
+        <data>PGRpdiBpZD0iY3VzdG9tVGV4dDEiIGNsYXNzPSJjdXN0b21TaGFwZSBjdXN0b21UZXh0IGNvbnRleHQtbWVudSBqdGstZHJhZ2dhYmxlIHVpLXJlc2l6YWJsZSBkcmFnc3RvcHBlZCIgZGF0YS1wYXRoPSIxIiBzdHlsZT0iZGlzcGxheTogaW5saW5lOyBwb3NpdGlvbjogYWJzb2x1dGU7IGxlZnQ6IDI4OHB4OyB0b3A6IDU0cHg7IGN1cnNvcjogbW92ZTsgei1pbmRleDogMTAwMTsiPjxwIGFsaWduPSJjZW50ZXIiIHN0eWxlPSJ2ZXJ0aWNhbC1hbGlnbjp0b3A7Y29sb3I6IzI2ZGY2NjtiYWNrZ3JvdW5kLWNvbG9yOiNmZmZmZmY7Zm9udC1zaXplOjEycHg7Zm9udC13ZWlnaHQ6IG5vcm1hbDsiPk1BVFJJWiBTQU8gUEFVTE8gICAgICAgICA8L3A+PGRpdiBjbGFzcz0idWktcmVzaXphYmxlLWhhbmRsZSB1aS1yZXNpemFibGUtZSIgc3R5bGU9InotaW5kZXg6IDkwOyI+PC9kaXY+PGRpdiBjbGFzcz0idWktcmVzaXphYmxlLWhhbmRsZSB1aS1yZXNpemFibGUtcyIgc3R5bGU9InotaW5kZXg6IDkwOyI+PC9kaXY+PGRpdiBjbGFzcz0idWktcmVzaXphYmxlLWhhbmRsZSB1aS1yZXNpemFibGUtc2UgdWktaWNvbiB1aS1pY29uLWdyaXBzbWFsbC1kaWFnb25hbC1zZSIgc3R5bGU9InotaW5kZXg6IDkwOyI+PC9kaXY+PC9kaXY+</data>
+      </textobject>
+      <textobject id="2" name="txt 2" type="text">
+        <data>PGRpdiBpZD0iY3VzdG9tVGV4dDIiIGNsYXNzPSJjdXN0b21TaGFwZSBjdXN0b21UZXh0IGNvbnRleHQtbWVudSBqdGstZHJhZ2dhYmxlIHVpLXNlbGVjdGVlIGp0ay1kcmFnLXNlbGVjdGVkIHVpLXJlc2l6YWJsZSBkcmFnc3RvcHBlZCIgZGF0YS1wYXRoPSIyIiBzdHlsZT0iZGlzcGxheTogaW5saW5lOyBwb3NpdGlvbjogYWJzb2x1dGU7IGxlZnQ6IDY4MXB4OyB0b3A6IDYwcHg7IGN1cnNvcjogbW92ZTsgei1pbmRleDogMTAwMTsgaGVpZ2h0OiAyMnB4OyB3aWR0aDogMTA0cHg7Ij48cCBhbGlnbj0iY2VudGVyIiBzdHlsZT0idmVydGljYWwtYWxpZ246IHRvcDsgY29sb3I6IHJnYigzMCwgMjIwLCA5Nik7IGJhY2tncm91bmQtY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1KTsgZm9udC1zaXplOiAxMXB4OyBmb250LXdlaWdodDogbm9ybWFsOyI+RklMSUFMIENBTVBJTkFTICAgICAgICAgPC9wPjxkaXYgY2xhc3M9InVpLXJlc2l6YWJsZS1oYW5kbGUgdWktcmVzaXphYmxlLWUiIHN0eWxlPSJ6LWluZGV4OiA5MDsiPjwvZGl2PjxkaXYgY2xhc3M9InVpLXJlc2l6YWJsZS1oYW5kbGUgdWktcmVzaXphYmxlLXMiIHN0eWxlPSJ6LWluZGV4OiA5MDsiPjwvZGl2PjxkaXYgY2xhc3M9InVpLXJlc2l6YWJsZS1oYW5kbGUgdWktcmVzaXphYmxlLXNlIHVpLWljb24gdWktaWNvbi1ncmlwc21hbGwtZGlhZ29uYWwtc2UiIHN0eWxlPSJ6LWluZGV4OiA5MDsiPjwvZGl2PjwvZGl2Pg==</data>
+      </textobject>
+      <textobject id="3" name="txt 3" type="text">
+        <data>PGRpdiBpZD0iY3VzdG9tVGV4dDMiIGNsYXNzPSJjdXN0b21TaGFwZSBjdXN0b21UZXh0IGNvbnRleHQtbWVudSBqdGstZHJhZ2dhYmxlIHVpLXJlc2l6YWJsZSBkcmFnc3RvcHBlZCIgZGF0YS1wYXRoPSIzIiBzdHlsZT0iZGlzcGxheTogaW5saW5lOyBwb3NpdGlvbjogYWJzb2x1dGU7IGxlZnQ6IDc1MHB4OyB0b3A6IDMzMHB4OyBjdXJzb3I6IG1vdmU7IHotaW5kZXg6IDEwMDE7Ij48cCBhbGlnbj0iY2VudGVyIiBzdHlsZT0idmVydGljYWwtYWxpZ246dG9wO2NvbG9yOiMxOWUxMjY7YmFja2dyb3VuZC1jb2xvcjojZmZmZmZmO2ZvbnQtc2l6ZToxMnB4O2ZvbnQtd2VpZ2h0OiBub3JtYWw7Ij5GSUxJQUwgSlVORElBSSAgICAgICAgPC9wPjxkaXYgY2xhc3M9InVpLXJlc2l6YWJsZS1oYW5kbGUgdWktcmVzaXphYmxlLWUiIHN0eWxlPSJ6LWluZGV4OiA5MDsiPjwvZGl2PjxkaXYgY2xhc3M9InVpLXJlc2l6YWJsZS1oYW5kbGUgdWktcmVzaXphYmxlLXMiIHN0eWxlPSJ6LWluZGV4OiA5MDsiPjwvZGl2PjxkaXYgY2xhc3M9InVpLXJlc2l6YWJsZS1oYW5kbGUgdWktcmVzaXphYmxlLXNlIHVpLWljb24gdWktaWNvbi1ncmlwc21hbGwtZGlhZ29uYWwtc2UiIHN0eWxlPSJ6LWluZGV4OiA5MDsiPjwvZGl2PjwvZGl2Pg==</data>
+      </textobject>
+      <textobject id="4" name="txt 4" type="text">
+        <data>PGRpdiBpZD0iY3VzdG9tVGV4dDE3NDc4NDYzNzU3NjYiIGNsYXNzPSJjdXN0b21TaGFwZSBjdXN0b21UZXh0IGNvbnRleHQtbWVudSIgZGF0YS1wYXRoPSIiIHN0eWxlPSJkaXNwbGF5OmlubGluZTtwb3NpdGlvbjphYnNvbHV0ZTtsZWZ0OjEyNnB4O3RvcDoxNTVweDsgY3Vyc29yOm1vdmU7IDt6LWluZGV4OjEwMDE7IiA+PHAgYWxpZ249ImNlbnRlciIgc3R5bGU9InZlcnRpY2FsLWFsaWduOnRvcDtjb2xvcjojMmMxZmRiO2JhY2tncm91bmQtY29sb3I6I2ZmZmZmZjtmb250LXNpemU6MTJweDtmb250LXdlaWdodDogbm9ybWFsOyI+ICAgICAgICBESENQIDwvcD48L2Rpdj4=</data>
+      </textobject>
+      <textobject id="5" name="txt 5" type="text">
+        <data>PGRpdiBpZD0iY3VzdG9tVGV4dDE3NDc4NDYzOTMzMDAiIGNsYXNzPSJjdXN0b21TaGFwZSBjdXN0b21UZXh0IGNvbnRleHQtbWVudSIgZGF0YS1wYXRoPSIiIHN0eWxlPSJkaXNwbGF5OmlubGluZTtwb3NpdGlvbjphYnNvbHV0ZTtsZWZ0OjEyMHB4O3RvcDoyNThweDsgY3Vyc29yOm1vdmU7IDt6LWluZGV4OjEwMDE7IiA+PHAgYWxpZ249ImNlbnRlciIgc3R5bGU9InZlcnRpY2FsLWFsaWduOnRvcDtjb2xvcjojMWQyZGFhO2JhY2tncm91bmQtY29sb3I6I2ZmZmZmZjtmb250LXNpemU6MTJweDtmb250LXdlaWdodDogbm9ybWFsOyI+ICAgICAgICBETlM8L3A+PC9kaXY+</data>
+      </textobject>
+      <textobject id="6" name="txt 6" type="text">
+        <data>PGRpdiBpZD0iY3VzdG9tVGV4dDYiIGNsYXNzPSJjdXN0b21TaGFwZSBjdXN0b21UZXh0IGNvbnRleHQtbWVudSB1aS1yZXNpemFibGUganRrLWRyYWdnYWJsZSBkcmFnc3RvcHBlZCIgZGF0YS1wYXRoPSI2IiBzdHlsZT0iZGlzcGxheTogaW5saW5lOyBwb3NpdGlvbjogYWJzb2x1dGU7IGxlZnQ6IDQ4cHg7IHRvcDogMzQ1cHg7IGN1cnNvcjogbW92ZTsgei1pbmRleDogMTAwMTsgaGVpZ2h0OiAyMy4xNDA2cHg7IHdpZHRoOiA5Ni4xNDA2cHg7Ij48cCBhbGlnbj0iY2VudGVyIiBzdHlsZT0idmVydGljYWwtYWxpZ246IHRvcDsgY29sb3I6IHJnYig0NSwgMzQsIDIwMSk7IGJhY2tncm91bmQtY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1KTsgZm9udC1zaXplOiAxMS41NzAzcHg7IGZvbnQtd2VpZ2h0OiBub3JtYWw7Ij5TRVJWSURPUiBXRUIgICAgICAgICA8L3A+PGRpdiBjbGFzcz0idWktcmVzaXphYmxlLWhhbmRsZSB1aS1yZXNpemFibGUtZSIgc3R5bGU9InotaW5kZXg6IDkwOyI+PC9kaXY+PGRpdiBjbGFzcz0idWktcmVzaXphYmxlLWhhbmRsZSB1aS1yZXNpemFibGUtcyIgc3R5bGU9InotaW5kZXg6IDkwOyI+PC9kaXY+PGRpdiBjbGFzcz0idWktcmVzaXphYmxlLWhhbmRsZSB1aS1yZXNpemFibGUtc2UgdWktaWNvbiB1aS1pY29uLWdyaXBzbWFsbC1kaWFnb25hbC1zZSIgc3R5bGU9InotaW5kZXg6IDkwOyI+PC9kaXY+PC9kaXY+</data>
+      </textobject>
+    </textobjects>
+  </objects>
+</lab>
