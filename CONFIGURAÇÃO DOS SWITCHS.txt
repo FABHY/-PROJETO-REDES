@@ -1,0 +1,75 @@
+Switchenable
+Switch#configure terminal
+Switch(config)#hostname matriz
+matriz(config)#enable password 123
+matriz(config)#enable secret 123
+matriz(config)#line console 0
+matriz(config-line)#password 1234
+matriz(config-line)#login
+matriz(config-line)#line vty 04
+matriz(config-line)#password 12345
+matriz(config-line)#login
+matriz(config-line)#exec-timeout 20 40
+matriz(config-line)#exit
+matriz(config)#service password-encryption
+matriz(config)#interface vlan 1
+matriz(config-if)#ip address 172.16.0.1 255.255.0.0
+matriz(config-if)#no shutdown
+matriz(config-if)#                                                                             nged state to up
+matriz(config-if)#exit
+matriz(config)#exit
+matriz#copy running-config startup-config
+===================================================
+
+Configuraão do switch campinas 
+Switch>enable
+Switch#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#hostname campinas 
+campinas (config)#enable password 123
+campinas (config)#enable secret 123
+campinas (config)#line console 0
+campinas (config-line)#password 1234
+campinas (config-line)#login
+campinas (config-line)#line vty 04
+campinas (config-line)#password 12345
+campinas (config-line)#login
+campinas (config-line)#exec-timeout 20 40
+campinas (config-line)#exit
+campinas (config)#service password-encryption
+campinas (config)#interface vlan 1
+campinas (config-if)#ip address 10.0.0.1 255.0.0.0
+campinas (config-if)#no shutdown
+campinas (config-if)#                                                                           
+campinas (config-if)#exit
+campinas (config)#exit
+campinas #copy running-config startup-config
+
+===============================================================
+
+Configuraão do switch jundiai
+Switch>enable
+Switch#configure terminal
+Switch(config)#hostname jundiai
+jundiai(config)#enable password 123
+jundiai(config)#enable secret 123
+jundiai(config)#line console 0
+jundiai(config-line)#password 1234
+jundiai(config-line)#login
+jundiai(config-line)#line vty 04
+jundiai(config-line)#password 12345
+jundiai(config-line)#login
+jundiai(config-line)#exec-timeout 20 40
+jundiai(config-line)#exit
+jundiai(config)#service password-encryption
+jundiai(config)#interface vlan 1
+jundiai(config-if)#ip address 192.168.20.1 255.255.255.0 
+jundiai(config-if)#no shutdown
+jundiai(config-if)#                                                                           
+jundiai(config-if)#exit
+jundiai(config)#exit
+jundiai#copy running-config startup-config
+
+
+
+
